@@ -3,7 +3,7 @@
 // http://natureofcode.com/
 // Session 2: Drag Force
 
-var Liquid = function(x, y, w, h, c) {
+function Liquid(x, y, w, h, c) {
   this.x = x;
   this.y = y;
   this.w = w;
