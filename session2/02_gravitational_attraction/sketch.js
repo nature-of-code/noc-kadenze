@@ -9,7 +9,7 @@ var attractor;
 
 function setup() {
   createCanvas(640, 360);
-  particle = new Particle(400, 50, 1);
+  particle = new Particle();
   attractor = new Attractor(width/2, height/2);
 }
 
