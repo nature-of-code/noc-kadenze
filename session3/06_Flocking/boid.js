@@ -29,14 +29,14 @@ function Boid(x, y) {
   // We accumulate a new acceleration each time based on three rules
   this.flock = function(boids) {
     var sep = this.separate(boids); // Separation
-    var ali = this.align(boids);    // Alignment
+    var ali = this.align(boids); // Alignment
     var coh = this.cohesion(boids); // Cohesion
-    
+
     // Arbitrarily weight these forces
     sep.mult(separationSlider.value());
     ali.mult(alignmentSlider.value());
     coh.mult(cohesionSlider.value());
-    
+
     // Add the force vectors to acceleration
     this.applyForce(sep);
     this.applyForce(ali);

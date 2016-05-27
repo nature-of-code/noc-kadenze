@@ -9,8 +9,8 @@ function Vehicle(x, y) {
   // All the usual stuff
   this.position = createVector(x, y);
   this.r = 12;
-  this.maxspeed = 3;    // Maximum speed
-  this.maxforce = 0.2;  // Maximum steering force
+  this.maxspeed = 3; // Maximum speed
+  this.maxforce = 0.2; // Maximum steering force
   this.acceleration = createVector(0, 0);
   this.velocity = createVector(0, 0);
 
@@ -22,7 +22,7 @@ function Vehicle(x, y) {
   // Separation
   // Method checks for nearby vehicles and steers away
   this.separate = function(vehicles) {
-    var desiredseparation = this.r*2;
+    var desiredseparation = this.r * 2;
     var sum = createVector();
     var count = 0;
     // For every boid in the system, check if it's too close
@@ -33,9 +33,9 @@ function Vehicle(x, y) {
         // Calculate vector pointing away from neighbor
         var diff = p5.Vector.sub(this.position, vehicles[i].position);
         diff.normalize();
-        diff.div(d);        // Weight by distance
+        diff.div(d); // Weight by distance
         sum.add(diff);
-        count++;            // Keep track of how many
+        count++; // Keep track of how many
       }
     }
     // Average -- divide by how many
@@ -74,9 +74,9 @@ function Vehicle(x, y) {
 
   // Wraparound
   this.borders = function() {
-    if (this.position.x < -this.r) this.position.x =  width+this.r;
-    if (this.position.y < -this.r) this.position.y = height+this.r;
-    if (this.position.x >  width+this.r) this.position.x = -this.r;
-    if (this.position.y > height+this.r) this.position.y = -this.r;
+    if (this.position.x < -this.r) this.position.x = width + this.r;
+    if (this.position.y < -this.r) this.position.y = height + this.r;
+    if (this.position.x > width + this.r) this.position.x = -this.r;
+    if (this.position.y > height + this.r) this.position.y = -this.r;
   }
 }

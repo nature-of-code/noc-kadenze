@@ -47,5 +47,3 @@ function keyPressed() {
 function mousePressed() {
   flowfield.init();
 }
-
-

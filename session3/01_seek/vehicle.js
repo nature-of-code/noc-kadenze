@@ -53,8 +53,3 @@ function Vehicle(x, y, m) {
     pop();
   }
 }
-
-
-
-
-
