@@ -1,6 +1,7 @@
-// The Nature of Code
 // Daniel Shiffman
-// http://natureofcode.com
+// https://www.kadenze.com/courses/the-nature-of-code
+// http://natureofcode.com/
+// Session 4: Tree with transformations
 
 var angle;
 
@@ -27,9 +28,9 @@ function branch(len, generation) {
   // Move to the end and shrink.
   translate(0, -len);
   len *= 0.66;
-  
+
   generation++;
-  
+
   if (len > 2) {
     push();
     rotate(angle);

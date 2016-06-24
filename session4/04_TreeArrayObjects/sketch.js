@@ -1,6 +1,7 @@
-// The Nature of Code
 // Daniel Shiffman
-// http://natureofcode.com
+// https://www.kadenze.com/courses/the-nature-of-code
+// http://natureofcode.com/
+// Session 4: Tree array of objects
 
 var tree = [];
 var leaves = [];
@@ -17,7 +18,7 @@ function draw() {
     // Get the branch, update and draw it
     tree[i].update();
     tree[i].render();
-    
+
     if (tree[i].timeToBranch()) {
       if (tree.length < 1024) {
         tree.push(tree[i].branch(30)); // Add one going right
